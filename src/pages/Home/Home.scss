@@ -1,0 +1,60 @@
+.Home{
+    height: 100vh;
+    background-image: url("https://www.teahub.io/photos/full/362-3624918_1920x1080-bambi-wallpaper-bambi-wallpaper-download-hd-disney.jpg");
+    padding-top: 200px;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: 80% 100%; 
+    .Wrapper{
+        width: 200px;
+        height: 170px;
+        .btn_direct{
+            border-radius: 6px;
+            text-align: center;
+            background: rgb(34, 30, 30);
+            color: #fff;
+            font-size: 26px;
+            font-weight: 200;
+            border: 3px solid #000;
+            cursor: pointer;
+            transition: all .4s;
+            &:hover{
+                background: rgb(50, 50, 50);
+                border: 3px solid rgb(75, 75, 75);
+                // color: rgb(75, 75, 75);
+            }
+        }
+
+        .intro{
+            position: relative;
+            animation-name: imgMoveLeft;
+            animation-duration: 1000ms;
+            animation-fill-mode: forwards;
+        }
+        .usage{
+            position: relative;
+            animation-name: imgMoveRight;
+            animation-duration: 1000ms;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes imgMoveLeft{
+            from {
+                left: -1000%;
+                opacity: 0;
+            } to{
+                left: 0;
+                opacity: 1;
+            }
+        }
+        @keyframes imgMoveRight{
+            from {
+                right: -1000%;
+                opacity: 0;
+            } to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+    }
+}

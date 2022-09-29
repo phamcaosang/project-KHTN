@@ -1,0 +1,144 @@
+.return{
+    width: 80px;
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Intro{
+    color: #575757;
+    margin: 0 350px;
+    position: relative;
+    h2{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .breakLine{
+        height: 2px;
+        width: 300px;
+        margin: 0 auto 1rem auto;
+        background-color: rgb(71, 71, 71);
+    }
+    .team{
+        .card{
+            width: 202px;
+            img{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+        .name{
+            text-align: center;
+            padding: 0 0 10px 0;
+        }
+        }
+    }
+
+    .models{
+        .groupModel{
+            margin-bottom: 30px;
+            h5{
+                font-weight: 600;
+            }
+            img{
+                width: 300px;
+                height: 200px;
+                border: 1px solid black;
+                object-fit: center;
+            }
+        }
+    }
+
+    .thanks{
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 1320px){
+    .Intro{
+        margin: 0 100px;
+    }
+}
+
+
+@media only screen and (max-width: 860px){
+    .Intro{
+        margin: 0 50px;
+        .team{
+            .card{
+                width: 165px;
+                img{
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .models{
+            .groupModel{
+                img{
+                    width: 240px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 610px){
+    .Intro{
+        .team{
+            flex-direction: column !important;
+            .card{
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+        }
+        .models{
+            .groupModel{
+                div{
+                    flex-direction: column;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                        width: 400px ;
+                        height: 240px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 480px){
+    .Intro{
+        margin: 0 20px;
+        .models{
+            .groupModel{
+                div{
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+}
