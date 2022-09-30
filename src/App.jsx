@@ -7,7 +7,6 @@ import {
 import Home from "./pages/Home/Home";
 import Intro from "./pages/Intro/Intro";
 import Usage from "./pages/Usage/Usage";
-
 function App() {
   return (
     <BrowserRouter>
