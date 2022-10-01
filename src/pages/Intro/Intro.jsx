@@ -6,6 +6,20 @@ import imgSang from "../../images/avatar_Sang.png"
 import imgThai from "../../images/avatar_Thai.png"
 import imgHa from "../../images/avatar_Ha.png"
 import sentiment_demo from "../../images/sentiment_demo.jpg"
+import wordcloud_1 from "../../images/wordcloud_1.png"
+import wordcloud_2 from "../../images/wordcloud_2.png"
+import matrix_gbt from "../../images/matrix_gbt.png"
+import matrix_lgt from "../../images/matrix_lgt.png"
+import matrix_nb from "../../images/matrix_nb.png"
+import matrix_svm from "../../images/matrix_svm.png"
+
+import cf_gbt from "../../images/cf_gbt.png"
+import cf_lgt from "../../images/cf_lgt.png"
+import cf_nb from "../../images/cf_nb.png"
+import cf_svm from "../../images/cf_svm.png"
+
+import bert from "../../images/bert_base.jpg"
+
 
 function Intro() {
   const navigate = useNavigate()
@@ -48,7 +62,12 @@ function Intro() {
        <div className='models'>
           <p>Với vấn đề được đặt ra nhóm chúng tôi đã thử nghiệm việc huấn luyện trên các model và thu được những kết quả khá khả quan.
           </p>
-          <p>
+          <span>WordCloud</span>
+          <div className='img-group'>
+            <img src={wordcloud_1} alt="" />
+            <img src={wordcloud_2} alt="" />
+          </div>
+          <p className='mt-3'>
           Vì đây là dữ liệu văn bản tiếng Việt nên cần thực hiện công việc chuẩn hóa văn bản trước tiên. Các cách xử lý dữ liệu dựa trên dữ liệu ban đầu, dữ liệu sau khi cân bằng... cho từng model cũng sẽ khác nhau (xử lý thô, chuẩn hoá unicode, tokenizer, stopword, undersampling, oversampling,...
           </p>
           <span>Các model sử dụng:</span>
@@ -80,8 +99,8 @@ function Intro() {
               <li>Xây dựng model dựa trên BERT/PhoBERT trên dữ liệu full và dữ liệu undersampling. Có sử dung 1 số thư viện có sẵn như wonrax để làm trên cả Colab Pro và Kaggle</li>
             </ol>
             <div className='d-flex justify-content-between'>
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
+              <img src={bert} alt="" 
+              style={{width: "100%", height: "auto"}}/>
             </div>
           </div>
           <div className='groupModel mt-3'>
@@ -94,20 +113,24 @@ function Intro() {
               <li>So sánh kết quả giữa các model PySpark</li>
             </ol>
             <div className='d-flex justify-content-between mb-3'>
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
+              <p className='text-center'>Gradient Boosted Tree</p>
+              <img src={matrix_gbt} alt="" />
+              <img src={cf_gbt} alt="" />
             </div>
             <div className='d-flex justify-content-between mb-3'>
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
+              <p className='text-center'>Logistic regression</p>
+              <img src={matrix_lgt} alt="" />
+              <img src={cf_lgt} alt="" />
             </div>
             <div className='d-flex justify-content-between mb-3'>
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
+              <p className='text-center'>Naive Bayes</p>
+              <img src={matrix_nb} alt="" />
+              <img src={cf_nb} alt="" />
             </div>
             <div className='d-flex justify-content-between'>
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
+              <p className='text-center'>Support Vector Machine</p>
+              <img src={matrix_svm} alt="" />
+              <img src={cf_svm} alt="" />
             </div>
           </div>
        </div>
