@@ -132,7 +132,7 @@ function Usage() {
       <div className='Option_2 wrapper'>
         <div className='formText'>
           <h3>Classify File Input <BsInfoCircleFill onClick={() => setOpen(o => !o)} className='info'/></h3>
-          <div className="custom-file">
+          <form className="custom-file" enctype="multipart/form-data">
             <input id="inputGroupFile01" type="file" 
               multiple={false}
               className="custom-file-input" 
@@ -141,7 +141,7 @@ function Usage() {
             <label className="custom-file-label" htmlFor="inputGroupFile01">
               {file ? "Select other file" : "Choose a csv file"}
             </label>
-          </div>
+          </form>
           {file &&
             <div className='btn_classify' onClick={handleClickFile}>
               {!loading ? 
