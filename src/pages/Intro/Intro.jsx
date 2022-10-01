@@ -46,7 +46,7 @@ function Intro() {
        </div>
        <h2>Những model sử dụng</h2>
        <div className='models'>
-          <p> ipsum dolor sit amet consectetur, adipisicing elit. Animi voluptas error laboriosam culpa beatae corrupti inventore sad autem suscipit temporibu. Quisquam, quod odio! Magni magnam odit minus repellendus dolores sit?
+          <p>Với vấn đề được đặt ra nhóm chúng tôi đã thử nghiệm việc huấn luyện trên các model khác nhau như các thuật toán Machine Learning trên Pyspark, RNN/LSTM, Bert/base và thu được những kết quả khá khả quan.
           </p>
           <div className='groupModel'>
             <h5>RNN/LSTM</h5>

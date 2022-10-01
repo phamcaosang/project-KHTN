@@ -134,6 +134,7 @@ function Usage() {
           <h3>Classify File Input <BsInfoCircleFill onClick={() => setOpen(o => !o)} className='info'/></h3>
           <div className="custom-file">
             <input id="inputGroupFile01" type="file" 
+              multiple={false}
               className="custom-file-input" 
               onChange={handleFile}
             />
