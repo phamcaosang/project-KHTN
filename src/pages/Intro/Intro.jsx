@@ -2,6 +2,11 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./Intro.scss"
 
+import imgSang from "../../images/avatar_Sang.png"
+import imgThai from "../../images/avatar_Thai.png"
+import imgHa from "../../images/avatar_Ha.png"
+import sentiment_demo from "../../images/sentiment_demo.jpg"
+
 function Intro() {
   const navigate = useNavigate()
   return (
@@ -12,26 +17,34 @@ function Intro() {
     <div className='Intro mt-5'>
         <h2>Introduction</h2>
        <div className='introduction'>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, doloribus. Quae quaerat at reiciendis, earum soluta magni ut repellendus ipsa, quisquam, deleniti veritatis obcaecati adipisci alias aliquam recusandae quos animi.
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ullam nulla natus ab placeat nihil magni inventore iste, a ex consequuntur quas facilis incidunt unde esse nesciunt ducimus. Ex, architecto.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quis sunt nulla cumque recusandae error ab, neque excepturi eligendi amet dolorum quibusdam molestias animi temporibus. Molestiae velit neque nostrum eos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptas necessitatibus similique, excepturi sed voluptatibus, corrupti repellat reprehenderit quam, maiores ipsum harum iste nobis voluptates! Totam corrupti laudantium culpa minima?</p>
+          <p>TripAdvisor là trang web cung cấp dịch vụ tư vấn du lịch đáng tin cậy từ chính những khách du lịch thực sự. Đặc biệt, trang web có các các liên kết liền mạch với công cụ đặt phòng giúp cho người dùng dễ dàng chọn lựa và đặt phòng nhanh chóng, dễ dàng.</p>
+          <img src="https://hotelcareers.vn/wp-content/uploads/2020/12/tripadvisor-ho-tro-dat-phong-dat-tour.jpg" style = {{width: "100%"}} alt="" />
+          <p className='mt-3'>Các du khách truy cập trang web TripAdvisor để chia sẻ kinh nghiệm về những chuyến du lịch của mình, chia sẻ những trải nghiệm, đưa ra những nhận xét về giá vé hay giá phòng khách sạn, chất lượng dịch vụ của nhà hàng, khách sạn đã từng đến, cách đặt phòng,… Những chia sẻ này giúp ích rất nhiều cho những du khách đang có ý định du lịch đến điểm du lịch đó.</p>
+       </div>
+       <h2>Mục tiêu/vấn đề</h2>
+       <div className='problem'>
+        <p>Xây dựng hệ thống Sentiment Analysis hỗ trợ khách sạn phân loại các phản hồi của khách hàng thành các nhóm: tích cực, tiêu cực, trung tính dựa trên dữ liệu dạng văn bản.</p>
+        <div className='text-center'>
+          <img src={sentiment_demo} alt="" />
+        </div>
+        <p className='mt-2'>Từ việc phân loại đánh giá đó, các khách sạn/ nhà nghỉ có thể hiểu được khách hàng rõ hơn, biết họ đánh giá về mình như thế nào để cải thiện hơn trong dịch vụ/ sản phẩm.</p>
        </div>
        <h2>Team</h2>
        <div className='team d-flex justify-content-between'>
-          <div className='card'>
-            <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="" />
-            <div className='name'>Repellat doloremque</div>
+          <div className='cardHuman'>
+            <img src={imgSang} alt="" />
+            <div className='name'>Pham Cao Sang</div>
           </div>
-          <div className='card'>
-            <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="" />
-            <div className='name'>Repellat doloremque</div>
+          <div className='cardHuman'>
+            <img src={imgThai} alt="" />
+            <div className='name'>Nguyen Van Thai</div>
           </div>
-          <div className='card'>
-            <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="" />
-            <div className='name'>Repellat doloremque</div>
+          <div className='cardHuman'>
+            <img src={imgHa} alt="" />
+            <div className='name'>Vu Thi Ha</div>
           </div>
        </div>
-       <h2>Models Used</h2>
+       <h2>Những model sử dụng</h2>
        <div className='models'>
           <p> ipsum dolor sit amet consectetur, adipisicing elit. Animi voluptas error laboriosam culpa beatae corrupti inventore sad autem suscipit temporibu. Quisquam, quod odio! Magni magnam odit minus repellendus dolores sit?
           </p>

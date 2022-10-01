@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./Usage.scss"
+import "./Usage.css"
 import axios from 'axios';
 import { FallingLines } from  'react-loader-spinner'
 import toast, { Toaster } from 'react-hot-toast';
+import {BsInfoCircleFill} from "react-icons/bs";
+import 'reactjs-popup/dist/index.css';
+import Popup from 'reactjs-popup';
+import demo from "../../images/demo_img.png"
 
 function Usage() {
   const allowExtenstions = ["txt"]
@@ -12,6 +17,8 @@ function Usage() {
   const [resultSingle, setResultSingle] = useState(null)
   const [resultFile, setResultFile] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
 
   const navigate = useNavigate()
 
@@ -77,6 +84,22 @@ function Usage() {
   }
   return (
     <>
+    <Popup className='popup' open={open} closeOnDocumentClick onClose={closeModal}>
+        <div className="model">
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div>
+            <h5>Yêu cầu file dữ liệu:</h5>
+            <ul>
+              <li>Định dạng .txt</li>
+              <li>Mỗi review nằm trên một hàng</li>
+            </ul>
+            <img src={demo} alt="" style={{border: "4px solid black", maxWidth: "100%"}}/>
+            
+          </div>
+        </div>
+      </Popup>
       <div className='return' onClick={()=>navigate("/")}>
         Return
       </div>
@@ -108,7 +131,7 @@ function Usage() {
       </div>
       <div className='Option_2 wrapper'>
         <div className='formText'>
-          <h3>Classify File Input</h3>
+          <h3>Classify File Input <BsInfoCircleFill onClick={() => setOpen(o => !o)} className='info'/></h3>
           <div className="custom-file">
             <input id="inputGroupFile01" type="file" 
               className="custom-file-input" 
