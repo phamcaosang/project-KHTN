@@ -12,11 +12,13 @@ import matrix_gbt from "../../images/matrix_gbt.png"
 import matrix_lgt from "../../images/matrix_lgt.png"
 import matrix_nb from "../../images/matrix_nb.png"
 import matrix_svm from "../../images/matrix_svm.png"
+import matrix_rnn from "../../images/matrix_rnn.png"
 
 import cf_gbt from "../../images/cf_gbt.png"
 import cf_lgt from "../../images/cf_lgt.png"
 import cf_nb from "../../images/cf_nb.png"
 import cf_svm from "../../images/cf_svm.png"
+import cf_rnn from "../../images/cf_rnn.png"
 
 import bert from "../../images/bert_base.jpg"
 
@@ -29,13 +31,13 @@ function Intro() {
         Return
       </div>
     <div className='Intro mt-5'>
-        <h2>Introduction</h2>
+        <h2 mt-5>Introduction</h2>
        <div className='introduction'>
           <p>TripAdvisor là trang web cung cấp dịch vụ tư vấn du lịch đáng tin cậy từ chính những khách du lịch thực sự. Đặc biệt, trang web có các các liên kết liền mạch với công cụ đặt phòng giúp cho người dùng dễ dàng chọn lựa và đặt phòng nhanh chóng, dễ dàng.</p>
           <img src="https://hotelcareers.vn/wp-content/uploads/2020/12/tripadvisor-ho-tro-dat-phong-dat-tour.jpg" style = {{width: "100%"}} alt="" />
           <p className='mt-3'>Các du khách truy cập trang web TripAdvisor để chia sẻ kinh nghiệm về những chuyến du lịch của mình, chia sẻ những trải nghiệm, đưa ra những nhận xét về giá vé hay giá phòng khách sạn, chất lượng dịch vụ của nhà hàng, khách sạn đã từng đến, cách đặt phòng,… Những chia sẻ này giúp ích rất nhiều cho những du khách đang có ý định du lịch đến điểm du lịch đó.</p>
        </div>
-       <h2>Mục tiêu/vấn đề</h2>
+       <h2 mt-5>Mục tiêu/vấn đề</h2>
        <div className='problem'>
         <p>Xây dựng hệ thống Sentiment Analysis hỗ trợ khách sạn phân loại các phản hồi của khách hàng thành các nhóm: tích cực, tiêu cực, trung tính dựa trên dữ liệu dạng văn bản.</p>
         <div className='text-center'>
@@ -43,7 +45,7 @@ function Intro() {
         </div>
         <p className='mt-2'>Từ việc phân loại đánh giá đó, các khách sạn/ nhà nghỉ có thể hiểu được khách hàng rõ hơn, biết họ đánh giá về mình như thế nào để cải thiện hơn trong dịch vụ/ sản phẩm.</p>
        </div>
-       <h2>Team</h2>
+       <h2 mt-5 >Team</h2>
        <div className='team d-flex justify-content-between'>
           <div className='cardHuman'>
             <img src={imgSang} alt="" />
@@ -58,7 +60,7 @@ function Intro() {
             <div className='name'>Vu Thi Ha</div>
           </div>
        </div>
-       <h2>Những model sử dụng</h2>
+       <h2 mt-5>Những model sử dụng</h2>
        <div className='models'>
           <p>Với vấn đề được đặt ra nhóm chúng tôi đã thử nghiệm việc huấn luyện trên các model và thu được những kết quả khá khả quan.
           </p>
@@ -86,8 +88,8 @@ function Intro() {
               <li>Đánh giá kết quả: Accuracy, precision, recall, F1,...</li>
               </ol>
             <div className='d-flex justify-content-between'>
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
-              <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
+              <img src={matrix_rnn} alt="" />
+              <img src={cf_rnn} alt="" />
             </div>
           </div>
           <div className='groupModel mt-3'>
@@ -112,6 +114,7 @@ function Intro() {
               <li>Xây dựng các model với các thuật toán khác nhau trên dữ liệu full và dữ liệu undersampling</li>
               <li>So sánh kết quả giữa các model PySpark</li>
             </ol>
+            <div className='mb-2'>Những kết quả của các model sau đây được huấn luyện trên tập dữ liệu được undersampling</div>
             <div className='d-flex justify-content-between mb-3'>
               <p className='text-center'>Gradient Boosted Tree</p>
               <img src={matrix_gbt} alt="" />
@@ -134,7 +137,7 @@ function Intro() {
             </div>
           </div>
        </div>
-       <h2>Tổng kết</h2>
+       <h2 mt-5>Tổng kết</h2>
        <div className='summary'>
        Sau khi so sánh các model (về thời gian, size model, kết quả dự đoán,...), nhóm đã quyết định lựa chọn model RNN/LSTM trên tệp dữ liệu đã cân bằng (undersampling) để tiến hành dự báo, dự đoán
        </div>
