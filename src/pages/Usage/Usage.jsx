@@ -74,13 +74,12 @@ function Usage() {
   const handleFile = (e)=>{
     const fileExtension = e.target.files[0].name.split(".").reverse()[0]
     if(allowExtenstions.some(item => item === fileExtension)){
-
+      console.log()
+      setFile(e.target.files[0])
     }else{
       toast(`File extension needs to be: ${allowExtenstions.join(", ")}`)
       setFile(null)
     }
-    console.log()
-    setFile(e.target.files[0])
   }
   return (
     <>
@@ -133,7 +132,8 @@ function Usage() {
         <div className='formText'>
           <h3>Classify File Input <BsInfoCircleFill onClick={() => setOpen(o => !o)} className='info'/></h3>
           <form className="custom-file" enctype="multipart/form-data">
-            <input id="inputGroupFile01" type="file" 
+            <input id="inputGroupFile01" type="file"
+            accept=".txt" 
               multiple={false}
               className="custom-file-input" 
               onChange={handleFile}
