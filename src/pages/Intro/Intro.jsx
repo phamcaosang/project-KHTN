@@ -46,27 +46,53 @@ function Intro() {
        </div>
        <h2>Những model sử dụng</h2>
        <div className='models'>
-          <p>Với vấn đề được đặt ra nhóm chúng tôi đã thử nghiệm việc huấn luyện trên các model khác nhau như các thuật toán Machine Learning trên Pyspark, RNN/LSTM, Bert/base và thu được những kết quả khá khả quan.
+          <p>Với vấn đề được đặt ra nhóm chúng tôi đã thử nghiệm việc huấn luyện trên các model và thu được những kết quả khá khả quan.
           </p>
-          <div className='groupModel'>
+          <p>
+          Vì đây là dữ liệu văn bản tiếng Việt nên cần thực hiện công việc chuẩn hóa văn bản trước tiên. Các cách xử lý dữ liệu dựa trên dữ liệu ban đầu, dữ liệu sau khi cân bằng... cho từng model cũng sẽ khác nhau (xử lý thô, chuẩn hoá unicode, tokenizer, stopword, undersampling, oversampling,...
+          </p>
+          <span>Các model sử dụng:</span>
+          <ul className='mb-3'>
+            <li>RNN/LSTM</li>
+            <li>BERT/ PhoBERT</li>
+            <li>PySpark NLP</li>
+          </ul>
+          <div className='groupModel mt-3'>
             <h5>RNN/LSTM</h5>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quis recusandae voluptates vel veritatis perspiciatis qui labore voluptas error laboriosam autem suscipit temporibu.</p>
+            <p>Việc ứng dụng RNN/LSTM đã đưa ra được nhiều kết quả không thể tin nổi trong nhiều lĩnh vực: nhận dạng giọng nói, mô hình hóa ngôn ngữ, dịch máy, mô tả ảnh,… </p>
+            <span>Các bước thực hiện trong bài toán này bao gồm:</span>
+            <ol>
+              <li>Lựa chọn tham số, số lượng hidden layers,... phù hợp</li>
+              <li>Xây dựng model RNN/LSTM dựa trên dữ liệu ban đầu và dữ liệu sau khi undersampling</li>
+              <li>Đánh giá kết quả: Accuracy, precision, recall, F1,...</li>
+              </ol>
             <div className='d-flex justify-content-between'>
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
             </div>
           </div>
-          <div className='groupModel'>
+          <div className='groupModel mt-3'>
             <h5>Bert base</h5>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quis recusandae voluptates vel veritatis perspiciatis qui labore voluptas error laboriosam autem suscipit temporibu.</p>
+            <p>BERT là một khái niệm đơn giản nhưng lại mang lại những thành tựu to lớn trong lĩnh vực xử lý ngôn ngữ tự nhiên. BERT là viết tắt của Bidirectional Encoder Representations from Transformers được hiểu là một mô hình học sẵn hay còn gọi là pre-train model.</p>
+            <span>Các bước thực hiện bao gồm:</span>
+            <ol>
+              <li>Tiền xử lý dữ liệu tương tự như model RNN/LSTM.</li>
+              <li>Xây dựng model dựa trên BERT/PhoBERT trên dữ liệu full và dữ liệu undersampling. Có sử dung 1 số thư viện có sẵn như wonrax để làm trên cả Colab Pro và Kaggle</li>
+            </ol>
             <div className='d-flex justify-content-between'>
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
             </div>
           </div>
-          <div className='groupModel'>
-            <h5>Pyspark</h5>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quis recusandae voluptates vel veritatis perspiciatis qui labore voluptas error laboriosam autem suscipit temporibu.</p>
+          <div className='groupModel mt-3'>
+            <h5>PySpark ML</h5>
+            <p>Spark ML có ưu điểm là có thể kết hợp nhiều thuật toán để tìm ra phương pháp tối ưu nhất.</p>
+            <span>Các bước thực hiện bao gồm:</span>
+            <ol>
+              <li>Tiền xử lý dữ liệu tương tự như model RNN/LSTM</li>
+              <li>Xây dựng các model với các thuật toán khác nhau trên dữ liệu full và dữ liệu undersampling</li>
+              <li>So sánh kết quả giữa các model PySpark</li>
+            </ol>
             <div className='d-flex justify-content-between mb-3'>
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
@@ -84,6 +110,10 @@ function Intro() {
               <img src="https://thumbs.dreamstime.com/b/result-red-rubber-stamp-over-white-background-88000702.jpg" alt="" />
             </div>
           </div>
+       </div>
+       <h2>Tổng kết</h2>
+       <div className='summary'>
+       Sau khi so sánh các model (về thời gian, size model, kết quả dự đoán,...), nhóm đã quyết định lựa chọn model RNN/LSTM trên tệp dữ liệu đã cân bằng (undersampling) để tiến hành dự báo, dự đoán
        </div>
        <div className='thanks'>
           Thanks For Reading!
